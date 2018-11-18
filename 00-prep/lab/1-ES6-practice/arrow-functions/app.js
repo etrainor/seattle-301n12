@@ -104,7 +104,7 @@ console.log('Hello from the new object function', newObject(['hi', 'hello', 'are
 // STEP 10
 // Uncomment the console.log lines to view the output of each function in the browser console.
 // Refactor each function into an arrow function.
-// Write your solutions on a single line wherever possible. 
+// Write your solutions on a single line wherever possible.
 
 
 
@@ -136,7 +136,7 @@ let message = name => `Hello, ${name}!`;
 console.log(message('Allie'));
 
 
-let Student = (name, age, hometown) => {
+let Student = function (name, age, hometown) {
   this.name = name;
   this.age = age;
   this.hometown = hometown;
@@ -155,7 +155,7 @@ Student.prototype.greeting = function() {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log(joe.greeting());
 
 
 Student.courseName = function() {
@@ -163,7 +163,7 @@ Student.courseName = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
 
 
@@ -174,17 +174,17 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
+console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-// 
+// The Student Constructor containing Joe
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// The window
 // 3. Explain why "this" is different when an arrow function is used.
-// 
+// Arrow functions do not bind their own 'this' so javascript is looking outside the arrow function to define the this... Not sure if this is correct.
