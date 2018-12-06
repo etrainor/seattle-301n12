@@ -1,10 +1,6 @@
-# Created by https://www.gitignore.io/api/node
 
-## Personal 
-NICHOLAS*
-FACILITATOR*
-static-client
-05-deployment/workshop
+# Created by https://www.gitignore.io/api/node
+# Edit at https://www.gitignore.io/?templates=node
 
 ### Node ###
 # Logs
@@ -79,7 +75,12 @@ typings/
 .vuepress/dist
 
 # Serverless directories
-.serverless
+.serverless/
 
+# FuseBox cache
+.fusebox/
+
+#DynamoDB Local files
+.dynamodb/
 
 # End of https://www.gitignore.io/api/node
